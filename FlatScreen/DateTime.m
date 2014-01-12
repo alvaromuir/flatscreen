@@ -46,6 +46,9 @@
 }
 
 -(NSString *) dateString{
+    /*
+     Returns the current date in MMMM dd[ord], YYYY -ord is the ordinal
+    */
     Utilities *utils = [Utilities new];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMMM,dd,y"];
@@ -62,6 +65,10 @@
 }
 
 -(NSString *) currentHour {
+    /*
+     Returns the current hour in words
+     and human readable minutes, i.e. 'quater past twelve'
+    */
     Utilities *utils = [Utilities new];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm:ss"];
