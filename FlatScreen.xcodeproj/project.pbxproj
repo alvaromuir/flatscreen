@@ -11,6 +11,10 @@
 		38A420231881D3AF003915B4 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A420221881D3AF003915B4 /* ScreenSaver.framework */; };
 		38A4202D1881D3AF003915B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38A4202B1881D3AF003915B4 /* InfoPlist.strings */; };
 		38A420311881D3AF003915B4 /* FlatScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A420301881D3AF003915B4 /* FlatScreenView.m */; };
+		38A4206518824EEC003915B4 /* DateTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A4206118824EEC003915B4 /* DateTime.h */; };
+		38A4206618824EEC003915B4 /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A4206218824EEC003915B4 /* DateTime.m */; };
+		38A4206718824EEC003915B4 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A4206318824EEC003915B4 /* Utilities.h */; };
+		38A4206818824EEC003915B4 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A4206418824EEC003915B4 /* Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		38A4202E1881D3AF003915B4 /* FlatScreen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlatScreen-Prefix.pch"; sourceTree = "<group>"; };
 		38A4202F1881D3AF003915B4 /* FlatScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlatScreenView.h; sourceTree = "<group>"; };
 		38A420301881D3AF003915B4 /* FlatScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatScreenView.m; sourceTree = "<group>"; };
+		38A4206118824EEC003915B4 /* DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTime.h; sourceTree = "<group>"; };
+		38A4206218824EEC003915B4 /* DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTime.m; sourceTree = "<group>"; };
+		38A4206318824EEC003915B4 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		38A4206418824EEC003915B4 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,10 @@
 		38A420281881D3AF003915B4 /* FlatScreen */ = {
 			isa = PBXGroup;
 			children = (
+				38A4206118824EEC003915B4 /* DateTime.h */,
+				38A4206218824EEC003915B4 /* DateTime.m */,
+				38A4206318824EEC003915B4 /* Utilities.h */,
+				38A4206418824EEC003915B4 /* Utilities.m */,
 				38A4202F1881D3AF003915B4 /* FlatScreenView.h */,
 				38A420301881D3AF003915B4 /* FlatScreenView.m */,
 				38A420291881D3AF003915B4 /* Supporting Files */,
@@ -104,6 +116,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A4206518824EEC003915B4 /* DateTime.h in Headers */,
+				38A4206718824EEC003915B4 /* Utilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A4206818824EEC003915B4 /* Utilities.m in Sources */,
+				38A4206618824EEC003915B4 /* DateTime.m in Sources */,
 				38A420311881D3AF003915B4 /* FlatScreenView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +328,7 @@
 				38A420361881D3AF003915B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
