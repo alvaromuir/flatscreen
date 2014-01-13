@@ -126,10 +126,6 @@
                                               }];
     [dateString drawInRect:dateBounds withAttributes:dateStringAttribs];
     
-    
-
-    
-    [super drawRect:rect];
 
 }
 
