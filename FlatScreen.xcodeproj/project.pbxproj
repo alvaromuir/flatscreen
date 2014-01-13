@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		38192887188368BC00AF4234 /* DateTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 38192881188368BC00AF4234 /* DateTime.h */; };
 		38192888188368BC00AF4234 /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 38192882188368BC00AF4234 /* DateTime.m */; };
-		38192889188368BC00AF4234 /* mrlContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 38192883188368BC00AF4234 /* mrlContent.h */; };
-		3819288A188368BC00AF4234 /* mrlContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 38192884188368BC00AF4234 /* mrlContent.m */; };
 		3819288B188368BC00AF4234 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 38192885188368BC00AF4234 /* Utilities.h */; };
 		3819288C188368BC00AF4234 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38192886188368BC00AF4234 /* Utilities.m */; };
 		38A420211881D3AF003915B4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A420201881D3AF003915B4 /* Cocoa.framework */; };
@@ -22,8 +20,6 @@
 /* Begin PBXFileReference section */
 		38192881188368BC00AF4234 /* DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTime.h; sourceTree = "<group>"; };
 		38192882188368BC00AF4234 /* DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTime.m; sourceTree = "<group>"; };
-		38192883188368BC00AF4234 /* mrlContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrlContent.h; sourceTree = "<group>"; };
-		38192884188368BC00AF4234 /* mrlContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mrlContent.m; sourceTree = "<group>"; };
 		38192885188368BC00AF4234 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		38192886188368BC00AF4234 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		38A4201D1881D3AF003915B4 /* FlatScreen.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatScreen.saver; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +90,6 @@
 			children = (
 				38192881188368BC00AF4234 /* DateTime.h */,
 				38192882188368BC00AF4234 /* DateTime.m */,
-				38192883188368BC00AF4234 /* mrlContent.h */,
-				38192884188368BC00AF4234 /* mrlContent.m */,
 				38192885188368BC00AF4234 /* Utilities.h */,
 				38192886188368BC00AF4234 /* Utilities.m */,
 				38A4202F1881D3AF003915B4 /* FlatScreenView.h */,
@@ -123,7 +117,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3819288B188368BC00AF4234 /* Utilities.h in Headers */,
-				38192889188368BC00AF4234 /* mrlContent.h in Headers */,
 				38192887188368BC00AF4234 /* DateTime.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38192888188368BC00AF4234 /* DateTime.m in Sources */,
-				3819288A188368BC00AF4234 /* mrlContent.m in Sources */,
 				3819288C188368BC00AF4234 /* Utilities.m in Sources */,
 				38A420311881D3AF003915B4 /* FlatScreenView.m in Sources */,
 			);
