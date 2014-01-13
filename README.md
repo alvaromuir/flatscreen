@@ -7,7 +7,7 @@ FlatScree
 Zip'd and uncompressed version of final saver in Release directory
 
 or download from here:
-https://github.com/alvaromuir/flatscreen/blob/master/Release/FlatScreen.saver-0.1.zip?raw=true
+https://github.com/alvaromuir/flatscreen/blob/master/Release/FlatScreen.saver-0.2.zip?raw=true
 
 
 ####Double-Click FlatScreen.saver to install.
@@ -17,6 +17,7 @@ https://github.com/alvaromuir/flatscreen/blob/master/Release/FlatScreen.saver-0.
 
 ToDo:
 - [ ] Configure Sheet
+- [ ] Embed fonts
 - [ ] Local Weather
 
 
