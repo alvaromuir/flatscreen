@@ -83,14 +83,15 @@
     
     // draw time prefix, if applicable
     NSRect timePrefixBounds = NSMakeRect(contentBounds.origin.x,
-                                         contentBounds.origin.y*2.1,
+                                         contentBounds.origin.y * 2.1,
                                          contentBounds.size.width,
-                                         80);
-    //    NSFrameRectWithWidth(timePrefixBounds, 1);
+                                         contentBounds.size.height * 0.2);
+    
     NSMutableDictionary *timePrefixAttribs = [NSMutableDictionary dictionaryWithDictionary: @{
                                               NSForegroundColorAttributeName: foregroundColor,
                                               NSParagraphStyleAttributeName: alignTextRight,
-                                              NSFontAttributeName: [NSFont fontWithName: @"BentonSans Extra Light" size: 80.0]
+                                              NSFontAttributeName: [NSFont fontWithName: @"BentonSans Extra Light"
+                                                                                   size: contentBounds.size.height * 0.2]
                                               }];
     [timePrefix drawInRect:timePrefixBounds withAttributes:timePrefixAttribs];
     
@@ -99,14 +100,15 @@
     
     // draw time hour
     NSRect hourBounds = NSMakeRect(contentBounds.origin.x,
-                                   timePrefixBounds.origin.y -65,
+                                   timePrefixBounds.origin.y - contentBounds.size.height * 0.15,
                                    contentBounds.size.width,
-                                   80);
-    //    NSFrameRectWithWidth(hourBounds, 1);
+                                   contentBounds.size.height * 0.20);
+
     NSMutableDictionary *timeStringAttribs = [NSMutableDictionary dictionaryWithDictionary: @{
                                               NSForegroundColorAttributeName: foregroundColor,
                                               NSParagraphStyleAttributeName: alignTextRight,
-                                              NSFontAttributeName: [NSFont fontWithName: @"BentonSans Bold" size: 80.0]
+                                              NSFontAttributeName: [NSFont fontWithName: @"BentonSans Bold"
+                                                                                   size: contentBounds.size.height * 0.2]
                                               }];
     [timeString drawInRect:hourBounds withAttributes:timeStringAttribs];
     
@@ -115,14 +117,15 @@
     //    // Draw date line
     NSString *dateString = dateTimeDict[@"date"];
     NSRect dateBounds = NSMakeRect(contentBounds.origin.x,
-                                   hourBounds.origin.y -35,
+                                   hourBounds.origin.y - contentBounds.size.height * .075,
                                    contentBounds.size.width,
-                                   60);
-    //    NSFrameRectWithWidth(dateBounds, 1);
+                                   contentBounds.size.height * 0.15);
+
     NSMutableDictionary *dateStringAttribs = [NSMutableDictionary dictionaryWithDictionary: @{
                                               NSForegroundColorAttributeName: foregroundColor,
                                               NSParagraphStyleAttributeName: alignTextRight,
-                                              NSFontAttributeName: [NSFont fontWithName: @"Roboto Slab Thin" size: 43.0]
+                                              NSFontAttributeName: [NSFont fontWithName: @"Roboto Slab Thin"
+                                                                                   size: contentBounds.size.height * 0.10]
                                               }];
     [dateString drawInRect:dateBounds withAttributes:dateStringAttribs];
     
