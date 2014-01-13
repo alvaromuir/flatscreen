@@ -102,7 +102,7 @@
             
             
         case 15:
-            [timeDict setObject: @"quarter" forKey:@"prefix"];
+            [timeDict setObject: @"it's a quarter" forKey:@"prefix"];
             [timeDict setObject: @"past" forKey:@"lead"];
             break;
             
@@ -126,7 +126,7 @@
             [timeDict setObject: nextHour forKey:@"hour"];
             break;
             
-        case 50 ... 59:
+        case 50 ... 50:
             min = [NSNumber numberWithInteger: (60 - intMin)];
             [timeDict setObject: [NSString stringWithFormat:@"%@ mins.",min] forKey:@"prefix"];
             [timeDict setObject: @"to" forKey:@"lead"];

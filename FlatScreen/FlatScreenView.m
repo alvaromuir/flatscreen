@@ -100,7 +100,7 @@
     
     // draw time hour
     NSRect hourBounds = NSMakeRect(contentBounds.origin.x,
-                                   timePrefixBounds.origin.y - contentBounds.size.height * 0.15,
+                                   timePrefixBounds.origin.y - contentBounds.size.height * 0.17,
                                    contentBounds.size.width,
                                    contentBounds.size.height * 0.20);
 
