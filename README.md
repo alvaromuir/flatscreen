@@ -16,8 +16,8 @@ https://github.com/alvaromuir/flatscreen/blob/master/Release/FlatScreen.saver-0.
 
 
 ToDo:
-	- Configure Sheet
-	- Local Weather
+- [ ] Configure Sheet
+- [ ] Local Weather
 
 
 
