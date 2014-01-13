@@ -129,7 +129,7 @@
     
 
     
-//    [super drawRect:rect];
+    [super drawRect:rect];
 
 }
 
