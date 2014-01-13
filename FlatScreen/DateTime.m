@@ -18,7 +18,7 @@
         _date = now;
         _calendar = [NSCalendar currentCalendar];
         _posix = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-
+        
     }
     return self;
 }
@@ -35,20 +35,11 @@
     return dateString;
 }
 
--(NSDateComponents *) components{
-    _date = [NSDate date];
-    _calendar = [NSCalendar currentCalendar];
-    
-    NSCalendarUnit units = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit |
-                            NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *components = [_calendar components:units fromDate:_date];
-    return components;
-}
 
 -(NSString *) dateString{
     /*
      Returns the current date in MMMM dd[ord], YYYY -ord is the ordinal
-    */
+     */
     Utilities *utils = [Utilities new];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMMM,dd,y"];
@@ -64,82 +55,102 @@
     return dateString;
 }
 
--(NSString *) currentHour {
+
+-(NSDictionary *) timeDict {
     /*
-     Returns the current hour in words
-     and human readable minutes, i.e. 'quater past twelve'
+     Returns dictionary of human readable time as: 
+     {
+        prefix (if applicable): [xx mins., quarter, half],
+        lead (if applicable):[to, past],
+        hour (if applicable): [twelve, one],
+        timeString: [1:33pm]
+     }
     */
     Utilities *utils = [Utilities new];
+    NSMutableDictionary *timeDict = [NSMutableDictionary dictionaryWithDictionary:@{}];
+    
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm:ss"];
     [formatter setLocale:_posix];
     
     NSString *formattedTime = [formatter stringFromDate:_date];
     NSArray *timeArray = [formattedTime componentsSeparatedByString:@":"];
-
+    
+    
     NSString *hour = [utils hourInWords:[timeArray[0] intValue]];
-    NSString *minutes;
+    
+    NSString *nextHour;
+    if ([timeArray[0] intValue] == 12)
+        nextHour = @"one";
+    else
+        nextHour = [utils hourInWords:[timeArray[0] intValue] + 1];
+    
+    
     NSNumber *min;
+    [timeDict setObject: hour forKey:@"hour"];
     int intMin = [timeArray[1] intValue];
     switch (intMin) {
-        case 00 ... 3:
-            min = [NSNumber numberWithInteger: intMin];
-            minutes = [NSString stringWithFormat:@"%@ minutes past %@", min, hour];
-            break;
-            
+        case 02 ... 5:
         case 10:
-            min = [NSNumber numberWithInteger: intMin];
-            minutes = [NSString stringWithFormat:@"%@ minutes past %@", min, hour];
-            break;
-            
-        case 15:
-            minutes = [NSString stringWithFormat:@"quarter past %@", hour];
-            break;
-
-//        case 16 ... 29:
-//            min = [NSNumber numberWithInteger: intMin];
-//            minutes = [NSString stringWithFormat:@"%@ minutes past %@", min, hour];
-//            break;
-
         case 20:
             min = [NSNumber numberWithInteger: intMin];
-            minutes = [NSString stringWithFormat:@"%@ minutes past %@", min, hour];
+            [timeDict setObject: [NSString stringWithFormat:@"%@ mins.",min] forKey:@"prefix"];
+            [timeDict setObject: @"past" forKey:@"lead"];
+
             break;
+            
+            
+        case 15:
+            [timeDict setObject: @"quarter" forKey:@"prefix"];
+            [timeDict setObject: @"past" forKey:@"lead"];
+            break;
+            
             
         case 30:
-            minutes = [NSString stringWithFormat:@"half past %@", hour];
+            [timeDict setObject: @"it's half" forKey:@"prefix"];
+            [timeDict setObject: @"past" forKey:@"lead"];
             break;
-
-//        case 31 ... 44:
-//            min = [NSNumber numberWithInteger: intMin];
-//            minutes = [NSString stringWithFormat:@"%@ minutes past %@", min, hour];
-//            break;
-
+            
+            
         case 40:
-            minutes = [NSString stringWithFormat:@"20 minutes til %@", hour];
+            min = [NSNumber numberWithInteger: (intMin - 20)];
+            [timeDict setObject: [NSString stringWithFormat:@"%@ mins.",min] forKey:@"prefix"];
+            [timeDict setObject: @"to" forKey:@"lead"];
+            [timeDict setObject: nextHour forKey:@"hour"];
+            break;
             
         case 45:
-            minutes = [NSString stringWithFormat:@"quarter to %@", hour];
+            [timeDict setObject: @"quarter" forKey:@"prefix"];
+            [timeDict setObject: @"to" forKey:@"lead"];
+            [timeDict setObject: nextHour forKey:@"hour"];
             break;
-            
-//        case 46 ... 49:
-//            min = [NSNumber numberWithInteger: intMin];
-//            minutes = [NSString stringWithFormat:@"%@ minutes past %@", min, hour];
-//            break;
             
         case 50 ... 59:
             min = [NSNumber numberWithInteger: (60 - intMin)];
-            minutes = [NSString stringWithFormat:@"%@ minutes til %@", min, hour];
+            [timeDict setObject: [NSString stringWithFormat:@"%@ mins.",min] forKey:@"prefix"];
+            [timeDict setObject: @"to" forKey:@"lead"];
+            [timeDict setObject: nextHour forKey:@"hour"];
             break;
             
         default:
-            [formatter setDateFormat:@"h:mm a"];
-            formattedTime = [formatter stringFromDate:_date];
-            minutes = formattedTime;
+            break;
     }
+    [formatter setDateFormat:@"h:mm a"];
+    formattedTime = [formatter stringFromDate:_date];
+    [timeDict setObject:formattedTime forKey:@"timeString"];
     
     
-    return minutes;
+    return timeDict;
+}
+
+
+-(NSDictionary *) dateTimeDict {
+    // Returns dictionary of date string and human readable time
+    NSDictionary *dateTimeDict = @{
+                                   @"time": [self timeDict], @"date": [self dateString]
+                                   };
+    return dateTimeDict;
 }
 
 

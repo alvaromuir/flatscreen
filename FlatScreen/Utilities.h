@@ -12,5 +12,4 @@
 
 -(NSString *)numberWithOrdinal:(int)number;
 -(NSString *)hourInWords:(int)hour;
-
 @end

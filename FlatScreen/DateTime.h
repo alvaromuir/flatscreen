@@ -13,7 +13,6 @@
 @property NSCalendar *calendar;
 @property NSLocale *posix;
 
--(NSString *) dateString;
--(NSString *) currentHour;
+-(NSDictionary *) dateTimeDict;
 
 @end
