@@ -11,10 +11,14 @@
 		38192888188368BC00AF4234 /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 38192882188368BC00AF4234 /* DateTime.m */; };
 		3819288B188368BC00AF4234 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 38192885188368BC00AF4234 /* Utilities.h */; };
 		3819288C188368BC00AF4234 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38192886188368BC00AF4234 /* Utilities.m */; };
+		3898B4BB1884B41900266F9C /* FlatScreen-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A4202A1881D3AF003915B4 /* FlatScreen-Info.plist */; };
 		38A420211881D3AF003915B4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A420201881D3AF003915B4 /* Cocoa.framework */; };
 		38A420231881D3AF003915B4 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A420221881D3AF003915B4 /* ScreenSaver.framework */; };
-		38A4202D1881D3AF003915B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38A4202B1881D3AF003915B4 /* InfoPlist.strings */; };
 		38A420311881D3AF003915B4 /* FlatScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A420301881D3AF003915B4 /* FlatScreenView.m */; };
+		38E830941884DA5A008C2F56 /* BentonSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38E830901884DA5A008C2F56 /* BentonSans-Bold.otf */; };
+		38E830951884DA5A008C2F56 /* BentonSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38E830911884DA5A008C2F56 /* BentonSans-ExtraLight.otf */; };
+		38E830961884DA5A008C2F56 /* meteocons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E830921884DA5A008C2F56 /* meteocons.ttf */; };
+		38E830971884DA5A008C2F56 /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38E830931884DA5A008C2F56 /* RobotoSlab-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		38A4202E1881D3AF003915B4 /* FlatScreen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlatScreen-Prefix.pch"; sourceTree = "<group>"; };
 		38A4202F1881D3AF003915B4 /* FlatScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlatScreenView.h; sourceTree = "<group>"; };
 		38A420301881D3AF003915B4 /* FlatScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatScreenView.m; sourceTree = "<group>"; };
+		38E830901884DA5A008C2F56 /* BentonSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Bold.otf"; sourceTree = "<group>"; };
+		38E830911884DA5A008C2F56 /* BentonSans-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-ExtraLight.otf"; sourceTree = "<group>"; };
+		38E830921884DA5A008C2F56 /* meteocons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = meteocons.ttf; sourceTree = "<group>"; };
+		38E830931884DA5A008C2F56 /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 		38A420121881D3AF003915B4 = {
 			isa = PBXGroup;
 			children = (
+				38E8308F1884DA5A008C2F56 /* Resources */,
 				38A420281881D3AF003915B4 /* FlatScreen */,
 				38A4201F1881D3AF003915B4 /* Frameworks */,
 				38A4201E1881D3AF003915B4 /* Products */,
@@ -109,6 +118,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		38E8308F1884DA5A008C2F56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38E830901884DA5A008C2F56 /* BentonSans-Bold.otf */,
+				38E830911884DA5A008C2F56 /* BentonSans-ExtraLight.otf */,
+				38E830921884DA5A008C2F56 /* meteocons.ttf */,
+				38E830931884DA5A008C2F56 /* RobotoSlab-Thin.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,8 +151,8 @@
 				38A420171881D3AF003915B4 /* Sources */,
 				38A420181881D3AF003915B4 /* Frameworks */,
 				38A420191881D3AF003915B4 /* Headers */,
-				38A4201A1881D3AF003915B4 /* Resources */,
 				38A4201B1881D3AF003915B4 /* Rez */,
+				3898B4B61884B41100266F9C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -170,11 +190,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		38A4201A1881D3AF003915B4 /* Resources */ = {
+		3898B4B61884B41100266F9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A4202D1881D3AF003915B4 /* InfoPlist.strings in Resources */,
+				38E830951884DA5A008C2F56 /* BentonSans-ExtraLight.otf in Resources */,
+				38E830971884DA5A008C2F56 /* RobotoSlab-Thin.ttf in Resources */,
+				3898B4BB1884B41900266F9C /* FlatScreen-Info.plist in Resources */,
+				38E830961884DA5A008C2F56 /* meteocons.ttf in Resources */,
+				38E830941884DA5A008C2F56 /* BentonSans-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

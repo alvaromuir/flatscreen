@@ -8,13 +8,22 @@
 
 #import "FlatScreenView.h"
 #import "DateTime.h"
+#import "Utilities.h"
 
 @implementation FlatScreenView
 
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
+    
+    Utilities *utils = [[Utilities alloc] init];
+    [utils fontActivate:@"BentonSans-Bold.otf"];
+    [utils fontActivate:@"BentonSans-ExtraLight.otf"];
+    [utils fontActivate:@"meteocons.ttf"];
+    [utils fontActivate:@"RobotoSlab-Thin.ttf"];
+    
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
+
         [self setAnimationTimeInterval:1/30.0];
     }
     return self;
@@ -32,7 +41,6 @@
 
 - (void)drawRect:(NSRect)rect
 {
-
     NSColor *backgroundColor = [NSColor colorWithCalibratedRed:(37.0/255.0)
                                                          green:(36.0/255.0)
                                                           blue:(36.0/255.0)
@@ -134,7 +142,7 @@
 
 - (void)animateOneFrame
 {
-    [self setNeedsDisplay:YES];
+//    [self setNeedsDisplay:YES];
     return;
 }
 

@@ -17,7 +17,7 @@ https://github.com/alvaromuir/flatscreen/blob/master/Release/FlatScreen.saver-0.
 
 ToDo:
 - [ ] Configure Sheet
-- [ ] Embed fonts
+- [X] Embed fonts
 - [ ] Local Weather
 
 

@@ -12,4 +12,5 @@
 
 -(NSString *)numberWithOrdinal:(int)number;
 -(NSString *)hourInWords:(int)hour;
+-(void) fontActivate:(NSString *) fontName;
 @end

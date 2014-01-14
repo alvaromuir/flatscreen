@@ -99,4 +99,14 @@
     return hourInWords;
 }
 
+-(void) fontActivate:(NSString *)fontName{
+    NSURL *fontURL = [[NSBundle bundleForClass:[self class]] URLForResource:fontName withExtension:nil];
+    assert(fontURL);
+    CFErrorRef error = NULL;
+    if (!CTFontManagerRegisterFontsForURL((__bridge CFURLRef)fontURL, kCTFontManagerScopeProcess, &error))
+    {
+        CFShow(error);
+        abort();
+    }
+}
 @end
