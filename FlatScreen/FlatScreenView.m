@@ -142,7 +142,7 @@
 
 - (void)animateOneFrame
 {
-//    [self setNeedsDisplay:YES];
+    [self setNeedsDisplay:YES];
     return;
 }
 
